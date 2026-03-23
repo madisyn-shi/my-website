@@ -236,12 +236,24 @@ margin:0 auto 25px;
 }
 
 /* CENTER IMAGE */
+.about-img-center{
+display:flex;
+justify-content:center;
+margin:30px 0;
 }
 
-
+.about-img-center img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:50%;
+}
+.about-img-center img{
+transition:0.4s;
 }
 
-
+.about-img-center img:hover{
+transform:scale(1.05);
 }p
 /* BACK TO TOP ARROW */
 .back-top{
@@ -1100,59 +1112,52 @@ color:#ddd;
 <style>
 
 /* PROCESS SECTION */
-#process{
-background:#e5e5e5;
-padding:40px;
-display:flex;
-justify-content:center;
-}
-
-.process-box{
-background:#f8f8f8;
+.process{
 max-width:900px;
-width:100%;
-padding:60px 30px;
-border-radius:10px;
+margin:0 auto;
+padding:40px 20px;
 }
 
-/* ITEM LAYOUT */
+/* EACH ITEM */
 .process-item{
-display:flex;
+display:grid;
+grid-template-columns: 220px 1fr;
 gap:30px;
-padding:20px 0;
-border-bottom:1px solid #ccc;
+padding:25px 0;
+border-bottom:1px solid #ddd;
 }
 
-/* TITLE */
+/* LEFT SIDE (TITLE) */
 .process-item h3{
-min-width:200px;
 font-size:18px;
+font-weight:bold;
 }
 
-/* TEXT */
+/* RIGHT SIDE (TEXT) */
 .process-item p{
-flex:1;
+font-size:14px;
+line-height:1.7;
 color:#444;
-line-height:1.6;
 }
 
-/* LAST ITEM REMOVE LINE */
-.process-item:last-child{
-border-bottom:none;
+/* 🔥 MOBILE FIX */
+@media(max-width:768px){
+
+.process-item{
+grid-template-columns:1fr;
+gap:10px;
 }
 
-/* HOVER EFFECT */
-.process-item:hover{
-background:#000;
-color:#fff;
-padding-left:10px;
-transition:0.3s;
+.process-item h3{
+font-size:16px;
+margin-bottom:5px;
 }
 
-.process-item:hover p{
-color:#ddd;
+.process-item p{
+font-size:14px;
 }
 
+}
 </style>
 
 </head>
